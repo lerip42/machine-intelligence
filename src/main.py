@@ -1,8 +1,8 @@
 import torch
 import torch.optim as optim
-from src.dataset import prepare_data
+from src.dataset_loading import prepare_data
 from src.models import DPMLPClassifier
-from src.loss import BinaryFocalLoss
+from src.loss_def import BinaryFocalLoss
 from src.dp_engine import run_dp_experiment
 
 if __name__ == "__main__":
