@@ -38,8 +38,7 @@ def prepare_data(csv_path: str, batch_size: int = 512, test_size: float = 0.2, r
     train_ds = FraudDataset(X_train, y_train)
     test_ds = FraudDataset(X_test, y_test)
 
-    # drop_last=True is required for DP-SGD batch stability in Opacus
-    train_loader = DataLoader(train_ds, batch_size=batch_size, shuffle=True, drop_last=True)
+    train_loader = DataLoader(train_ds, batch_size=batch_size, shuffle=True)
     test_loader = DataLoader(test_ds, batch_size=batch_size, shuffle=False)
 
     # Compute imbalance weight ratio (Negative_Count / Positive_Count)
