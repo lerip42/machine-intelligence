@@ -30,7 +30,7 @@ def evaluate(model, loader, device):
         roc_auc = roc_auc_score(y_true, y_probs, multi_class='ovr')
         pr_auc = 0.0  # PR-AUC is defined for binary metrics
 
-    # Binary Evaluation (e.g., Credit Card Fraud)
+    # Binary Evaluation
     else:
         y_probs = torch.sigmoid(logits).squeeze().numpy()
         roc_auc = roc_auc_score(y_true, y_probs)
