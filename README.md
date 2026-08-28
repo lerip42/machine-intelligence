@@ -1,10 +1,6 @@
 # Differential Privacy and MIA Resistance on Fashion-MNIST
 
 This is the github repository for the project report for the course Machine Intelligence: Concepts and Applications in the summer semester of 2026
-Basic 
-
-
-
 Here, I evaluate the empirical utility-privacy trade-offs of Differentially Private Stochastic Gradient Descent (DP-SGD) and its defense capability against Membership Inference Attacks (MIAs) on the Fashion-MNIST dataset.
 
 ## Repository Structure
