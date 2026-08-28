@@ -4,6 +4,7 @@ from torch.utils.data import Dataset, DataLoader
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
+# "Fraud" is a relict from a previous version of the code. However, naming it this way does not affect functionality.
 class FraudDataset(Dataset):
     def __init__(self, X, y):
         self.X = torch.tensor(X, dtype=torch.float32)

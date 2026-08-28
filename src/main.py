@@ -14,17 +14,17 @@ if __name__ == "__main__":
     TARGET_DELTA = 1e-5
     DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
-    # 1. Load Data
+    # Load Data
     train_loader, test_loader, pos_weight, input_dim = prepare_data(
         DATA_PATH, batch_size=BATCH_SIZE
     )
 
-    # 2. Instantiate Model, Loss, and Optimizer
+    # Instantiate Model, Loss, and Optimizer
     model = DPMLPClassifier(input_dim=input_dim, hidden_dim=64)
     optimizer = optim.Adam(model.parameters(), lr=1e-3)
     criterion = BinaryFocalLoss(gamma=2.0, pos_weight=pos_weight)
 
-    # 3. Train with Differential Privacy
+    # Train with Differential Privacy
     model, history = run_dp_experiment(
         train_loader=train_loader,
         test_loader=test_loader,
