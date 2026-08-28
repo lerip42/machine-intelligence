@@ -10,7 +10,7 @@ Here, I evaluate the empirical utility-privacy trade-offs of Differentially Priv
 ## Repository Structure
 
 ```text
-├── src/                # Source code. Model definitions, data loading and setup.
-├── results/            # Rendered plots and tabular outputs
-├── notebooks/          # Utility-privacy trade-off and MIA evaluation
-└── requirements.txt    # Library requirements to run this project's code
+├── src/                Source code. Model definitions, data loading and setup.
+├── results/            Rendered plots and outputs
+├── notebooks/          Utility-privacy trade-off and MIA evaluation code
+└── requirements.txt    Library requirements to run this project's code
